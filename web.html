@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Julio Flores y Asociados, S.C. | Despacho Contable en Pachuca</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #FFFFFF;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: #0C2D48;
+    }
+
+    .navbar {
+      background-color: #0C2D48;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .navbar-brand {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      color: #FFFFFF !important;
+      font-size: 1.4rem;
+    }
+
+    .nav-link {
+      color: #FFFFFF !important;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-left: 0.8rem;
+      margin-right: 0.8rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-link:hover, .nav-link:focus {
+      color: #F47C2A !important;
+    }
+
+    .navbar-toggler {
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    /* --- ESTILOS PARA LA SECCIÓN DEL ENCABEZADO (HERO SECTION) --- */
+    header.hero-section {
+      background-color: #0C2D48; /* Fondo azul marino */
+      color: #FFFFFF; /* Texto blanco */
+      padding: 100px 20px; /* Espaciado interno */
+      min-height: 60vh; /* Altura mínima */
+      display: flex; /* Usamos Flexbox para centrar contenido vertical y horizontalmente */
+      flex-direction: column; /* Apilamos los elementos verticalmente */
+      justify-content: center; /* Centra el contenido verticalmente */
+      align-items: center;   /* Centra el contenido horizontalmente */
+      text-align: center;    /* Asegura que el texto dentro de los elementos hijos también se centre por defecto */
+    }
+
+    /* Contenedor interno del Hero Section (si usas Bootstrap .container) */
+    header.hero-section .container {
+      text-align: center; /* Fuerza el centrado para el contenido dentro del div.container */
+      width: 100%; /* Permite que el container ocupe el espacio necesario, Bootstrap lo manejará */
+    }
+
+    header.hero-section h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 1rem;
+      text-align: center; /* Asegura que el texto del h1 esté centrado */
+    }
+
+    header.hero-section .lead {
+      font-size: 1.3rem;
+      color: #e0e0e0;
+      margin-bottom: 2rem;
+      max-width: 800px;   /* Mantenemos el ancho máximo para legibilidad */
+      margin-left: auto;   /* Estas dos propiedades centran el bloque del párrafo */
+      margin-right: auto;  /* si tiene un max-width y es un elemento de bloque. */
+      text-align: center;  /* Asegura que el texto DENTRO del párrafo esté centrado */
+    }
+    /* --- FIN DE ESTILOS PARA HERO SECTION --- */
+
+    .btn-primary-custom {
+      background-color: #F47C2A;
+      border-color: #F47C2A;
+      color: #FFFFFF;
+      padding: 12px 30px;
+      font-weight: 600;
+      text-transform: uppercase;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn-primary-custom:hover, .btn-primary-custom:focus {
+      background-color: #d96820;
+      border-color: #d96820;
+      color: #FFFFFF;
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 70px 0;
+    }
+
+    section h2.section-title {
+      text-align: center;
+      font-size: 2.3rem;
+      margin-bottom: 60px;
+      position: relative;
+      padding-bottom: 20px;
+    }
+    section h2.section-title::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 80px;
+        height: 4px;
+        background: #F47C2A;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #about {
+      background-color: #FFFFFF;
+    }
+    #about h4 {
+        color: #F47C2A; /* Naranja para subtítulos en "Sobre Nosotros" */
+        margin-top: 20px;
+    }
+
+    #services {
+      background-color: #f8f9fa;
+    }
+    #services .service-item {
+        background-color: #FFFFFF;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        transition: transform 0.3s ease;
+        height: 100%;
+    }
+    #services .service-item:hover {
+        transform: translateY(-5px);
+    }
+    #services .service-item i {
+        font-size: 2.5rem;
+        color: #F47C2A;
+        margin-bottom: 15px;
+        display: block;
+    }
+     #services .service-item h5 {
+        color: #0C2D48;
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+
+
+    #clients {
+      background-color: #FFFFFF;
+    }
+     #clients p {
+        font-size: 1.1rem;
+     }
+
+    #mission-vision { /* Estilo para la sección de Misión y Visión */
+        background-color: #f8f9fa; /* Un fondo ligeramente diferente */
+    }
+    #mission-vision h3.section-title { /* Ajuste para títulos dentro de Misión y Visión */
+        text-align: left;
+        font-size: 2rem;
+        padding-bottom: 10px;
+        margin-bottom: 20px; /* Menos margen inferior para estos títulos */
+    }
+    #mission-vision h3.section-title::after { /* Remover o ajustar la línea naranja si se ve mal a la izquierda */
+        left: 0;
+        transform: translateX(0);
+    }
+    #mission-vision p {
+        text-align: left;
+        padding-left:0;
+    }
+
+
+    #contact {
+      background-color: #0C2D48;
+      color: #FFFFFF;
+    }
+    #contact h2.section-title, #contact p, #contact .contact-info a {
+        color: #FFFFFF;
+    }
+     #contact h2.section-title::after {
+        background: #FFFFFF;
+    }
+    #contact .contact-info i {
+        color: #F47C2A; /* Íconos de contacto en naranja */
+        font-size: 1.5rem;
+        margin-right: 10px;
+        width: 25px; /* Ancho fijo para alinear texto */
+        text-align: center;
+    }
+    #contact .contact-info p {
+        margin-bottom: 0.8rem; /* Más espacio entre líneas de contacto */
+        display: flex;
+        align-items: center;
+    }
+     #contact .contact-info a:hover {
+        color: #F47C2A; /* Naranja al pasar el mouse sobre enlaces de contacto */
+     }
+
+
+    #contact form input, #contact form textarea {
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      border: 1px solid #555;
+      padding: 12px;
+      background-color: #fff;
+      color: #333;
+    }
+    #contact form input::placeholder, #contact form textarea::placeholder {
+        color: #777;
+    }
+
+    .facebook-icon-contact {
+      color: #F47C2A;
+      font-size: 1.1rem;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex; /* Para alinear ícono y texto */
+      align-items: center;
+      margin-top: 15px;
+    }
+    .facebook-icon-contact:hover {
+      color: #FFFFFF;
+      text-decoration: underline;
+    }
+    .facebook-icon-contact i {
+      font-size: 1.8rem;
+      margin-right: 8px;
+    }
+
+
+    footer {
+      background-color: #1f2b38; /* Un azul un poco más claro que el navbar para diferenciar */
+      color: #FFFFFF;
+      padding: 40px 0;
+      text-align: center;
+    }
+    footer p {
+      margin-bottom: 0;
+      color: #c0c0c0;
+      font-size: 0.9rem;
+    }
+    footer a {
+        color: #F47C2A;
+        text-decoration: none;
+    }
+    footer a:hover {
+        text-decoration: underline;
+    }
+
+
+    .animate__animated {
+        visibility: visible !important;
+    }
+
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Julio Flores y Asociados, S.C.</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#clients">Clientes</a></li>
+          <li class="nav-item"><a class="nav-link" href="#mission-vision">Misión y Visión</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero-section text-white text-center py-5 animate__animated animate__fadeInDown">
+    <div class="container">
+      <h1>Asesoría Contable y Fiscal de Confianza</h1>
+      <p class="lead">Con más de 20 años de experiencia, ofrecemos soluciones integrales y personalizadas para el éxito de tu empresa. Liderazgo y prestigio a base de esfuerzo profesional.</p>
+      <a href="#contact" class="btn btn-primary-custom">Contáctanos Ahora</a>
+    </div>
+  </header>
+
+  <section id="about" class="py-5 animate__animated animate__fadeInUp">
+    <div class="container">
+      <h2 class="section-title">Sobre Nosotros</h2>
+      <div class="row gy-4">
+        <div class="col-lg-7">
+            <p><strong>Julio Flores y Asociados, S.C.</strong> es un despacho contable que ofrece servicios profesionales de asesoría contable y administrativa, consultoría fiscal especializada, defensa fiscal, auditoría fiscal y financiera.</p>
+            <p>Nos ubicamos en <strong>Lago De Los Bosques Lote 1, Colonia Ampliación El Palmar, Pachuca De Soto, Hidalgo.</strong></p>
+            <p><strong>Teléfonos:</strong> <a href="tel:7711135831" style="color: #F47C2A; text-decoration:none;">771 113 5831</a> y <a href="tel:7712951250" style="color: #F47C2A; text-decoration:none;">771 295 1250</a></p>
+
+            <h4>Nuestra Historia y Filosofía</h4>
+            <p>Constituida legalmente el 11 de febrero de 2009, nuestra firma nació bajo la dirección del L.C. y M.D.F. Julio Flores García, quien cuenta con más de 20 años de experiencia. Desde nuestros inicios, hemos crecido gracias al trabajo en equipo, el respaldo profesional de colaboradores clave como la contadora María Guadalupe Cano Pérez (con más de 15 años de experiencia), y una filosofía centrada en el liderazgo, prestigio y la calidad en cada servicio.</p>
+            <p>Hemos expandido nuestras oficinas a Tulancingo de Bravo y Apan, Hidalgo, invirtiendo constantemente en tecnología, capacitación y mejores instalaciones, como nuestras nuevas oficinas en construcción en Pachuca. La base de nuestro éxito es la responsabilidad y ética profesional en cada trabajo.</p>
+        </div>
+        <div class="col-lg-5">
+            <img src="images/foto_despach.jpg" class="img-fluid rounded shadow" alt="Equipo de Julio Flores y Asociados S.C.">
+            <h4 class="mt-4">Nuestro Equipo</h4>
+            <p>Actualmente, colaboramos un grupo de aproximadamente 11 profesionistas comprometidos con el servicio y el crecimiento continuo, siempre listos para atender las necesidades de nuestra creciente cartera de clientes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="py-5 animate__animated animate__fadeInUp">
+    <div class="container">
+      <h2 class="section-title">Nuestros Servicios</h2>
+      <div class="row gy-4 text-center">
+        <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+            <div class="service-item w-100">
+                <i class="bi bi-calculator-fill"></i>
+                <h5>Asesoría Contable y Administrativa</h5>
+                <p>Análisis detallado, diagnóstico y soluciones para la gestión contable y administrativa de su empresa.</p>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+            <div class="service-item w-100">
+                <i class="bi bi-briefcase-fill"></i>
+                <h5>Consultoría Fiscal Especializada</h5>
+                <p>Implementación de estrategias fiscales inteligentes para optimizar la carga tributaria dentro del marco legal.</p>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+            <div class="service-item w-100">
+                <i class="bi bi-shield-check"></i>
+                <h5>Defensa Fiscal</h5>
+                <p>Asesoría y representación legal ante problemas con la administración tributaria, resolviendo conflictos y sanciones.</p>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+            <div class="service-item w-100">
+                <i class="bi bi-file-earmark-ruled-fill"></i>
+                <h5>Auditoría Fiscal y Financiera</h5>
+                <p>Revisión exhaustiva para garantizar la correcta aplicación de normativas y la salud financiera de su negocio.</p>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+            <div class="service-item w-100">
+                <i class="bi bi-folder-check"></i>
+                <h5>Gestión de Trámites</h5>
+                <p>Elaboración y seguimiento de trámites ante autoridades, como presentación de declaraciones y atención a requerimientos.</p>
+            </div>
+        </div>
+         <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+            <div class="service-item w-100">
+                <i class="bi bi-lightbulb-fill"></i>
+                <h5>Estrategias Inteligentes</h5>
+                <p>Desarrollo de soluciones innovadoras para que las empresas tributen legalmente con una carga fiscal rentable.</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="clients" class="py-5 animate__animated animate__fadeInUp">
+    <div class="container">
+      <h2 class="section-title">Nuestros Clientes</h2>
+      <p class="text-center lead" style="max-width: 900px; margin-left: auto; margin-right:auto;">
+        Brindamos servicios a una diversa cartera de clientes, tanto individuos como empresas, en sectores clave como:
+      </p>
+      <div class="row text-center mt-4 gy-3">
+        <div class="col-md-4"><i class="bi bi-tools" style="color:#F47C2A; font-size: 1.5rem; vertical-align: middle; margin-right: 5px;"></i> Construcción e Ingeniería Civil</div>
+        <div class="col-md-4"><i class="bi bi-cart3" style="color:#F47C2A; font-size: 1.5rem; vertical-align: middle; margin-right: 5px;"></i> Comercio Mayorista y Minorista</div>
+        <div class="col-md-4"><i class="bi bi-truck" style="color:#F47C2A; font-size: 1.5rem; vertical-align: middle; margin-right: 5px;"></i> Transporte de Carga General</div>
+        <div class="col-md-4"><i class="bi bi-building" style="color:#F47C2A; font-size: 1.5rem; vertical-align: middle; margin-right: 5px;"></i> Servicios Inmobiliarios y Alquiler</div>
+        <div class="col-md-4"><i class="bi bi-mortarboard-fill" style="color:#F47C2A; font-size: 1.5rem; vertical-align: middle; margin-right: 5px;"></i> Educación e Instituciones</div>
+        <div class="col-md-4"><i class="bi bi-person-workspace" style="color:#F47C2A; font-size: 1.5rem; vertical-align: middle; margin-right: 5px;"></i> Servicios Profesionales y Técnicos</div>
+      </div>
+      <p class="text-center mt-4">Atendemos clientes con diversos regímenes fiscales ante el SAT, adaptándonos a sus necesidades para el cumplimiento de sus obligaciones tributarias.</p>
+    </div>
+  </section>
+
+  <section id="mission-vision" class="py-5 animate__animated animate__fadeInUp">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h3 class="section-title">Misión</h3>
+                 <p>Proporcionar servicios de asesoría contable y administrativa, consultoría fiscal especializada, defensa fiscal, auditoría fiscal y financiera, así como la implementación de estrategias fiscales inteligentes que permitan hacer que las empresas sean rentables, tributando bajo un marco de legalidad y sirviendo con profesionalismo todo servicio contratado.</p>
+            </div>
+            <div class="col-lg-6">
+                <h3 class="section-title">Visión</h3>
+                <p>Hacer de la firma de asesores una prestadora de servicios profesionales siempre a la vanguardia, capacitada e instruida desde el nivel de dirección hasta el último de sus colaboradores. Satisfaciendo las necesidades del sector que demanda siempre un servicio profesional, haciendo de la firma una organización líder, que genere a sus clientes, colaboradores y usuarios de los servicios, beneficios, seguridad, confianza y estabilidad a largo plazo.</p>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-5 animate__animated animate__fadeInUp">
+    <div class="container">
+      <h2 class="section-title">Contáctanos</h2>
+      <div class="row gy-5">
+        <div class="col-lg-5 contact-info">
+            <p class="lead mb-4">Estamos listos para ayudarte. Ponte en contacto con nosotros o visítanos.</p>
+            <p><i class="bi bi-geo-alt-fill"></i> Lago De Los Bosques Lote 1, Col. Ampliación El Palmar, Pachuca De Soto, Hidalgo.</p>
+            <p><i class="bi bi-telephone-fill"></i> <a href="tel:7711135831">771 113 5831</a></p>
+            <p><i class="bi bi-phone-fill"></i> <a href="tel:7712951250">771 295 1250</a></p>
+            <p><i class="bi bi-envelope-fill"></i> <a href="mailto:arthurking8d@gmail.com">arthurking8d@gmail.com</a></p>
+            <div class="mt-4">
+                <a href="https://www.facebook.com/juliofloresyasociadossc?locale=es_LA" target="_blank" class="facebook-icon-contact">
+                    <i class="bi bi-facebook"></i> Visítanos en Facebook
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-7">
+            <form action="https://formsubmit.co/arthurking8d@gmail.com" method="POST" class="p-4 shadow-sm" style="background-color: rgba(255,255,255,0.05); border-radius:8px;">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://tudominio.com/gracias.html"> <input type="hidden" name="_subject" value="Nuevo mensaje desde la web de Julio Flores y Asociados">
+                <div class="mb-3">
+                  <input type="text" name="name" class="form-control" placeholder="Nombre completo *" required>
+                </div>
+                <div class="mb-3">
+                  <input type="email" name="email" class="form-control" placeholder="Correo electrónico *" required>
+                </div>
+                <div class="mb-3">
+                    <input type="tel" name="phone" class="form-control" placeholder="Teléfono (Opcional)">
+                </div>
+                <div class="mb-3">
+                  <textarea name="message" class="form-control" rows="5" placeholder="Tu mensaje *" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary-custom w-100">Enviar Mensaje</button>
+            </form>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-12">
+             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d936.6547565865409!2d-98.78856638043806!3d20.108206408190597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2smx!4v1748026856940!5m2!1ses!2smx" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center py-4">
+    <div class="container">
+      <p>© <span id="currentYear"></span> Julio Flores y Asociados, S.C. Todos los derechos reservados. | <a href="#">Aviso de Privacidad</a></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
